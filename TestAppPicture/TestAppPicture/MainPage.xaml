@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestAppPicture.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+     <RelativeLayout>
+         <ScrollView RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant=0}"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0,Constant=0}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=0}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}">
+             <StackLayout Padding="10">
+                 <StackLayout Orientation="Horizontal" Margin="0,10,5,0">
+                     <Label Text="Статус:" FontSize="20" FontAttributes="Bold"/>
+                     <Label Text="{Binding Status}" TextColor="{Binding StatusColor}" FontSize="20"/>
+
+                 </StackLayout>
+                 <Label Text="Сообщение сервера:" FontSize="20" FontAttributes="Bold"/>
+                 <Label Text="{Binding Text}" FontSize="20"/>
+
+                 <Image HorizontalOptions="CenterAndExpand" Source="{Binding Source}" />
+
+             </StackLayout>
+
+         </ScrollView>
+
+         <Button  HeightRequest="50" CornerRadius="10" Margin="10,5,10,10" Text="{Binding TextButton}"
+                  FontSize="16" Padding="0,0,0,0" Command="{Binding StartStopRun}"
+                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1.0,Constant=-90}"
+                  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"/>
+
+         </RelativeLayout>
+
+</ContentPage>
+
