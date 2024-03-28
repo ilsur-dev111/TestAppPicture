@@ -5,8 +5,9 @@ namespace TestAppPicture.Models
 	{
 		public string Text1 { get; set; }
 		public string Picture { get; set; }
+лаов
 
-		
     }
+
 }
 
