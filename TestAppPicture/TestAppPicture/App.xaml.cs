@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using TestAppPicture.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -27,8 +27,17 @@ namespace TestAppPicture
                 pageModel.Stop();
         }
 
+
+
+
         protected override void OnResume ()
         {
+
+
+
+
+
+
 
         }
     }
